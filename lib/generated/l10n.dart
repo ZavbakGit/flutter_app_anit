@@ -35,13 +35,13 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Hello world`
-  String get title {
+  /// `Hello {time}`
+  String title(Object time) {
     return Intl.message(
-      'Hello world',
+      'Hello $time',
       name: 'title',
       desc: '',
-      args: [],
+      args: [time],
     );
   }
 }
